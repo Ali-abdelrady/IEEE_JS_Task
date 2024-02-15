@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 1- Print All Even Numbers
+    let num = 0;
+    for(let num = 0 ; num <= 10 ; num++)
+    {
+        if(num % 2 == 0)
+        {
+            console.log(num);
+        }
+    }
+    
+    // 2. Print a table containing multiplication tables
+    const multiplication_table=[];
+    for(let i = 1 ; i <= 10 ; i++)
+    {
+        let sub_table=[];
+        for(let j = 1 ; j <= 10 ; j++)
+        {
+            sub_table.push(i*j);
+        }
+        multiplication_table.push(sub_table);
+    }
+    console.log(multiplication_table);
+
+    // 3. Remove the spaces found in a string
+    let str = "hi my name is ali";
+    let newStr = str.split(" ").join("");
+    console.log(newStr);
+
+    // 4. Return a Boolean if a number is divisible by 10
+    let num2 = 20;
+    if(Is_Divisible(num2))
+    {
+        console.log("True");
+    }
+    else
+    {
+        console.log("False");
+    }
+    function Is_Divisible(num)
+    {
+        if(num % 10 == 0)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    // 5. Return the number of vowels in a string
+    const vowels = ['a','e','i','o','u','A','E','I','O','U'];
+    let str2 = "abdelrady and no one else";
+    let cnt = 0;
+    for(let ch of str2)
+    {
+        if(vowels.includes(ch))
+        {
+            cnt++;
+        }
+    }
+    console.log(cnt)
+</script>
+</html>
